@@ -1,3 +1,11 @@
+import { useEffect } from "react";
+import { getImages } from "../../services/api";
+
 export default function Home() {
-  return <h1>Home oldal</h1>;
+  useEffect(() => {
+    getImages().then(console.log);
+  }, []);
+
+  return <div>Home</div>;
 }
+
